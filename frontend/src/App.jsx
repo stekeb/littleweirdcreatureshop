@@ -5,7 +5,8 @@ import './App.css'
 import Header from './components/Header'
 import SortField from './components/SortField'
 import Cart from './components/Cart'
-
+import ProductRange from './components/ProductRange'
+import Product from './components/Product'
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -44,11 +45,13 @@ function App() {
   const [cartState, setCartState] = useState(false);
   const [profilState, setProfilState] = useState(false);
   const [sortFieldState, setSortFieldState] = useState(true);
+  const [productRangeState, setProductRangeState] = useState(true);
 
   const displayCart = () => {
     setHeaderState(!headerState);
     setSortFieldState(!sortFieldState);
-    setCartState(!cartState)
+    setCartState(!cartState);
+    setProductRangeState(!productRangeState)
   }
 
   return (
@@ -61,6 +64,7 @@ function App() {
       {/* filter */}
       {sortFieldState && <SortField />}
       {/* sortiment */}
+      {productRangeState && <ProductRange />}
         {/* produkt */}
 
 
