@@ -2,6 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './components/Header'
+import SortField from './components/SortField'
+import Cart from './components/Cart'
+
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -35,46 +39,27 @@ import './App.css'
 // export default App
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  const [headerState, setHeaderState] =  useState(true); 
+  const [cartState, setCartState] = useState(false);
+  const [profilState, setProfilState] = useState(false);
+  const [sortFieldState, setSortFieldState] = useState(true);
 
-  function Header() {
-    return (
-      <>
-        <span>Cibaria Civis</span>
-        <span>
-          <button className="HeaderButton">Account</button>
-          <button className="HeaderButton">Warenkorb</button>
-        </span>
-      </>
-    )  
+  const displayCart = () => {
+    setHeaderState(!headerState);
+    setSortFieldState(!sortFieldState);
+    setCartState(!cartState)
   }
-
-  function SortField() {
-    return (
-      <>
-        <button className="HeaderButton">Filter</button>
-        <button className="HeaderButton">Sortieren</button>
-      </>
-    )
-
-  }
-
 
   return (
     <>
-      {/* header */}
-      <div>
-        <Header />
-      </div>
-
+      {headerState && <Header displayCart={displayCart}/>}
         {/* warenkorb */}
+      {cartState && <Cart />}
         {/* profil */}
+      {profilState && <Profil />}
       {/* filter */}
-      <div>
-        <SortField />
-      </div>
-
+      {sortFieldState && <SortField />}
       {/* sortiment */}
         {/* produkt */}
 
