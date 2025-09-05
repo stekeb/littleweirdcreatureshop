@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+.product {
+  border: 3px solid black;
+  background-color: yellow;
+}
+
+#prod {
+    background-color: yellow;
+
+}

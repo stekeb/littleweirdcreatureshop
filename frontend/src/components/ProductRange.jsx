@@ -2,14 +2,14 @@ import Product from "./Product"
 
 export default function ProductRange() {
 
-    let array = [{name:"A", size:"m"}, {name:"B", size:"L"}]
+    let array = [{id:0, name:"A", size:"m", price:259.95}, {id:1, name:"B", size:"L", price:689.95}]
     
 
     return (
         <>
-            <ul>
-                {array.map(item =>(<Product name={item.name} size={item.size}/>))}
-            </ul>  
+                 <div id="prod">TESTSTSTSTS</div>
+                {array.map(item =>(<Product id="prod"  className="product" key={item.id} name={item.name} size={item.size} price={item.price}/>))}
+              
         </>
     )
 }
