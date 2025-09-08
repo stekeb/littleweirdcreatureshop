@@ -1,5 +1,17 @@
+import { useState } from "react";
+
 export default function Profile() {
-    return (
-        null
-    )
+
+  const [isOpen, setIsOpen] = useState(false);
+
+const togglePopup = () => {
+    setIsOpen(!isOpen);
+};
+
+
+  return (
+    <div className="cart">
+      <h2>Profile</h2>
+    </div>
+  );
 }

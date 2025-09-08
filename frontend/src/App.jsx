@@ -4,13 +4,14 @@ import Header from './components/Header'
 import SortField from './components/SortField'
 import Cart from './components/Cart'
 import ProductRange from './components/ProductRange'
+import Profile from './components/Profile'
 
 
 function App() {
 
   const [headerState, setHeaderState] =  useState(true); 
   const [cartState, setCartState] = useState(false);
-  const [profilState, setProfilState] = useState(false);
+  const [profileState, setProfileState] = useState(false);
   const [sortFieldState, setSortFieldState] = useState(true);
   const [productRangeState, setProductRangeState] = useState(true);
 
@@ -21,22 +22,29 @@ function App() {
     setProductRangeState(!productRangeState)
   }
 
+  const displayProfile = () => {
+    setHeaderState(!headerState);
+    setSortFieldState(!sortFieldState);
+    setProfileState(!profileState);
+    setProductRangeState(!productRangeState)
+  }
+
   return (
-    <>
+    <div className="global-container">
      
-      {headerState && <Header displayCart={displayCart}/>}
+      {headerState && <Header displayCart={displayCart} displayProfile={displayProfile}/>}
         {/* warenkorb */}
       {cartState && <Cart />}
         {/* profil */}
-      {profilState && <Profil />}
+      {profileState && <Profile />}
       {/* filter */}
       {sortFieldState && <SortField />}
       {/* sortiment */}
-      {productRangeState && <ProductRange className="product" id="prod" />}
+      {productRangeState && <ProductRange />}
         {/* produkt */}
 
 
-    </>
+    </div>
   )
 }
 export default App

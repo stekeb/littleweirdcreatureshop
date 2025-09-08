@@ -1,14 +1,6 @@
-// export default function Cart() {
-//   return (
-//     <div className="cart">
-//         <CartItem />
-//         <div>Gesamtpreis: </div>
-//     </div>
-//   );
-// }
 
-// src/Cart.jsx
 import { useState } from "react";
+
 export default function Cart() {
   const [items, setItems] = useState([]);
   const [isOpen, setIsOpen] = useState(false);

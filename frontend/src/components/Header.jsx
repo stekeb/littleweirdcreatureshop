@@ -1,21 +1,21 @@
-//   function Header() {
-//     return (
-//       <>
-//         <span>Cibaria Civis</span>
-//         <span>
-//           <button className="HeaderButton">Account</button>
-//           <button className="HeaderButton">Warenkorb</button>
-//         </span>
-//       </>
-//     )  
-//   }
+import './Header.css'
 
-  export default function Header({displayCart}) {
+  export default function Header({displayProfile, displayCart}) {
   return (
-    <div className="header">
-      <span>Cibaria Civis</span>
-      <button className="HeaderButton">Profil</button>
-      <button className="HeaderButton" onClick={()=>{displayCart()}} >Warenkorb</button>
+    <div className="header-container">
+
+      <div className="header-logo-container">
+        <img className="header-logo" src="/images/logo_04.svg" />
+      </div>
+
+      <div className="header-title-container">
+        <div className='header-title'>CIBARIA CIVIS</div>
+      </div>
+
+      <div className="header-button-container">
+        <button className="HeaderButton" onClick={()=>{displayProfile()}}>Profil</button>
+        <button className="HeaderButton" onClick={()=>{displayCart()}} >Warenkorb</button>
+      </div>
     </div>
   );
 }

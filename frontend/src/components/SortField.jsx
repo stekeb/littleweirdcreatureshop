@@ -1,9 +1,11 @@
+ import './SortField.css'
+ 
  export default function SortField() {
     return (
       <>
-        <div>
-            <button className="HeaderButton">Filter</button>
-            <button className="HeaderButton">Sortieren</button>
+        <div className='sortfield-container'>
+            <button className="sortfield-button">Filter</button>
+            <button className="sortfield-button">Sortieren</button>
         </div>
       </>
     )
