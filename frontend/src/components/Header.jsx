@@ -9,7 +9,7 @@ import './Header.css'
       </div>
 
       <div className="header-title-container">
-        <div className='header-title'>CIBARIA CIVIS</div>
+        <div className='header-title'>LittleWeirdCreatureClub</div>
       </div>
 
       <div className="header-button-container">
