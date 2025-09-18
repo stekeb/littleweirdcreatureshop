@@ -11,6 +11,10 @@ import Profile from './Profile'
  
 
 
+
+ 
+ export default function StandardView() {
+
       const [headerState, setHeaderState] =  useState(true); 
       const [cartState, setCartState] = useState(false);
       const [profileState, setProfileState] = useState(false);
@@ -30,9 +34,6 @@ import Profile from './Profile'
         setProfileState(!profileState);
         setProductRangeState(!productRangeState)
       }
- 
- export default function StandardView() {
-
 
 
 

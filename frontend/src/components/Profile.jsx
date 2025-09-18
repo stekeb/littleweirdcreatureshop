@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
 
@@ -10,7 +11,7 @@ const togglePopup = () => {
 
 
   return (
-    <div className="cart">
+    <div className="profile">
       <h2>Profile</h2>
     </div>
   );

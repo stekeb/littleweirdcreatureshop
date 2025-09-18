@@ -7,6 +7,7 @@ import './App.css'
 // import Profile from './components/Profile'
 import StandardView from './components/StandardView'
 // import StandardView2 from './components/StandardView2'
+// import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
 function App() {
