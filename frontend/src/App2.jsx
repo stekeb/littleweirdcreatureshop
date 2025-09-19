@@ -5,9 +5,39 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Profile2 from './components/Profile2'
 import Cart2 from './components/Cart2'
 import ProductDetail from './components/ProductDetail'
+import { useState, useEffect } from 'react'
 
+const getAllData = async() => {
+    const response = await fetch(`http://localhost:8000/`, {
+		method: 'GET',
+	});
+	const data = await response.json();
+	return data;
+}
 
 function App() {
+
+const [allData, setAllData] = useState([]);
+const [workingData, setWorkingData] = useState([]);
+
+useEffect(() => {
+	try {
+		getAllData().then((files) => {
+			setAllData(files);
+            setWorkingData(files)
+		});
+	} catch (error) {
+		console.error(err);
+	}
+}, []);
+
+
+
+
+            
+            
+        
+    
 
     let array = [
         {id:0, name:"A", description:"lecker schads schads schads schads schads schads schads schads schads schads schads schads schads schads schads", size:"m", price:259.95}, 
@@ -39,10 +69,10 @@ function App() {
   return (
   
         <Routes> 
-            <Route path='/' element={<StandardView2 array={array} />} />
+            <Route path='/' element={<StandardView2 array={workingData} />} />
             <Route path='/profile' element={<Profile2 />} />
             <Route path='/cart' element={<Cart2 />} />
-            <Route path='/product/:id' element={<ProductDetail array={array}/>} />
+            <Route path='/product/:id' element={<ProductDetail array={allData}/>} />
         </Routes>
 
 

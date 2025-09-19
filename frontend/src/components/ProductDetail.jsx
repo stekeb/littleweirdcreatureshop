@@ -3,6 +3,18 @@ import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 export default function ProductDetail({array}) {
 
+    //   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    //   product_id TEXT,
+    //   product_name TEXT,
+    //   price NUMERIC,
+    //   size NUMERIC,
+    //   weight NUMERIC,
+    //   talent TEXT,
+    //   feature TEXT,
+    //   front_url TEXT,
+    //   side_url TEXT,
+    //   back_URL TEXT
+
     const navigate= useNavigate()
 
     const { id } = useParams()
