@@ -1,6 +1,17 @@
 import './Product.css'
 import { Link } from "react-router-dom"
 
+//       id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    //   product_id TEXT,
+    //   product_name TEXT,
+    //   price NUMERIC,
+    //   size NUMERIC,
+    //   weight NUMERIC,
+    //   talent TEXT,
+    //   feature TEXT,
+    //   front_url TEXT,
+    //   side_url TEXT,
+    //   back_URL TEXT
 export default function Product({id, name, description, size, color, weight, price}) {
     return (
         <Link to={`/product/${id}`}>
