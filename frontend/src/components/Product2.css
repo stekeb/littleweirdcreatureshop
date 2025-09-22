@@ -35,7 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: visible;
   /* Remove position: sticky, top, z-index, background */
 }
 
