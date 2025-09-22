@@ -1,4 +1,4 @@
-import './Product.css'
+import './Product2.css'
 import { Link } from "react-router-dom"
 
 //       id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
