@@ -1,5 +1,5 @@
 .range-container {
-    background-color: green;
+    background-color: rgb(14, 43, 105);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

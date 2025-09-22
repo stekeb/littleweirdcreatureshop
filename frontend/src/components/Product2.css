@@ -1,0 +1,140 @@
+/* ---------- VARIABLES ---------- */
+:root {
+  --primary: #2563eb;         /* main blue */
+  --primary-dark: #1e40af;    /* darker blue */
+  --secondary: #f3f4f6;       /* light gray */
+  --text: #1f2937;             /* dark gray */
+  --white: #ffffff;
+}
+
+/* ---------- PRODUCT CONTAINER ---------- */
+.product-container {
+  background-color: var(--white);
+  border: 1px solid var(--secondary);
+  border-radius: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 250px;
+  height: 400px; /* or whatever height you want */
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* ---------- PRODUCT IMAGE ---------- */
+.product-image-container {
+  height: 180px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Remove position: sticky, top, z-index, background */
+}
+
+.product-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-image-container:hover img {
+  transform: scale(1.1);
+}
+
+/* ---------- PRODUCT NAME ---------- */
+.product-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text);
+  text-align: center;
+  padding: 8px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ---------- PRODUCT DESCRIPTION ---------- */
+.product-description {
+  font-size: 0.9rem;
+  color: #4b5563;
+  padding: 0 10px 10px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- PRICE AND BUTTON ---------- */
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-top: 1px solid var(--secondary);
+  background: var(--white);
+}
+
+.product-price {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.buy-button {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.buy-button:hover {
+  background: var(--primary-dark);
+}
+
+/* ---------- PRODUCT GRID ---------- */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.product-grid:hover .product-container:not(:hover) {
+  transform: scale(0.9);
+  filter: brightness(0.6) saturate(0) contrast(1.1) blur(2px);
+  transition: transform 0.3s, filter 0.3s ease;
+}
+
+/* Highlight the hovered card */
+.product-container:hover {
+  transform: scale(1.65) translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+
+/* Combine image and name into a sticky header */
+.product-top-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-bottom: 1px solid var(--secondary);
+}
+
+
