@@ -2,7 +2,7 @@
 import express from 'express'; // Express laden
 // require('dotenv').config(); // .env laden (muss nicht sein in Produktion)
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({path: "../.env"});
 const app = express(); // App-Instanz erzeugen
 
 import authRouter from './routes/auth.js';
@@ -60,8 +60,8 @@ app.get('/filter', async (req, res) => {
 // app.use('/products', require('./routes/products')); // Products-Router unter /products
 
 
-const PORT = process.env.PORT || 8000; // Port aus env oder Fallback 8000
-
+const PORT = process.env.PORT || 3000; // Port aus env oder Fallback 8000
+console.log(process.env.PORT)
 // Für server.js-Kompatibilität zusätzlich eine port-Variable (nutzen wir unten in app.listen)
 const port = Number(PORT);
 
@@ -70,3 +70,4 @@ app.listen(port, host, () => {
 	console.log(`Example app listening on port ${port}`); // aus server.js
 	console.log(`API läuft auf http://localhost:${port}`); // bestehendes Log beibehalten
 });
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            

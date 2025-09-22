@@ -6,6 +6,8 @@ export default function Profile() {
 
     return (
         <>
+            <input className="login-username">USERNAME</input>
+            <input className="login-password">PASSWORD</input>
             <button onClick={ ()=> navigate('/')}>Login</button>
             <button onClick={ ()=> navigate('/')}>Register</button>    
             <button onClick={ ()=> navigate('/')}>back</button>

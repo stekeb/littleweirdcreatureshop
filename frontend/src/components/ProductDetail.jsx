@@ -26,14 +26,26 @@ export default function ProductDetail({array}) {
 
     return (
         <>
+            
+
+            
             <div className="image-container">
-                <img src =""/>
-                
+                <img src ={product.front_url}/>
             </div>
 
-            <div className="description-container">
-                <p>
+            <div className="name-container">
+                name: {product.product_name}
+            </div>
 
+            <div className="talent-container">
+                talent:
+                {product.talent}
+            </div>
+
+
+            <div className="feature-container">
+                <p>feature:
+                    {product.feature}
                 </p>
             </div>
 

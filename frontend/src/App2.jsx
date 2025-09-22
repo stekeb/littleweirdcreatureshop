@@ -8,7 +8,7 @@ import ProductDetail from './components/ProductDetail'
 import { useState, useEffect } from 'react'
 
 const getAllData = async() => {
-    const response = await fetch(`http://localhost:8000/`, {
+    const response = await fetch(`http://localhost:3000/`, {
 		method: 'GET',
 	});
 	const data = await response.json();
