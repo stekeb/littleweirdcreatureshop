@@ -36,7 +36,7 @@ export default function Product({id, product_id, product_name, price, size, weig
                 </div>
             
                 <div className="product-price-container">
-                    <div className="product-price">Preis: {price}</div>    
+                    <div className="product-price">Preis: {price} €</div>    
                 </div>
             
             </div>
@@ -44,3 +44,4 @@ export default function Product({id, product_id, product_name, price, size, weig
         
     )
 }
+

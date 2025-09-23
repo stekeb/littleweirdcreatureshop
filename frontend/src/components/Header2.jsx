@@ -18,6 +18,7 @@ export default function Header() {
 
             <div className="header-title-container">
                 <div className='header-title'>LittleWeirdCreatureClub</div>
+                <h2 className='header-subtitle'>Welcome to our Creature Shop - Discover a world of magical creatures</h2>
             </div>
 
             <div className="header-button-container">

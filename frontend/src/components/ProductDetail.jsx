@@ -50,7 +50,7 @@ export default function ProductDetail({array}) {
             </div>
 
             <div className="price">
-                Preis: <p>{product.price}</p>
+                Preis: <p>{product.price} €</p> 
             </div>
 
             <button>
