@@ -52,9 +52,24 @@ const createTableAndRows = async () => {
       feature TEXT,
       front_url TEXT,
       side_url TEXT,
-      back_URL TEXT
+      back_url TEXT
     );
   `);
+		await client.query(`
+		  CREATE TABLE IF NOT EXISTS account (
+		    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+		    name TEXT,
+		    email TEXT,
+		    password TEXT
+		  );
+		`);
+		await client.query(`
+		  CREATE TABLE IF NOT EXISTS basketitems (
+		    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+		    product_id BIGINT,
+		    account_id BIGINT
+		  );
+		`);
 	} catch (err) {
 		console.error('❌ Error creating table/rows:', err);
 	} finally {
@@ -127,6 +142,7 @@ const createDB = async () => {
 	const creatureTableName = 'creatures';
 	try {
 		const database = await createDatabase(process.env.DB_NAME);
+		await new Promise((res) => setTimeout(res, 1000));
 		const table = await createTableAndRows();
 		const parsedCSVData = await parseCSV('creatures.csv');
 		const queryAndValueObj = await createQueryAndQueryData(
