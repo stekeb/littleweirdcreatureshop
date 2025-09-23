@@ -15,10 +15,10 @@ cd littleweirdcreatureshop
 cd backend && npm i && cd ../frontend && npm i
 ```
 
-3. Create environment variable files\
+3. Create environment variable files
 
 ```
-Create an .env files using the example the backend folder
+Create an .env file using the example the backend folder
 ```
 
 4. Create and fill database
@@ -27,7 +27,7 @@ Create an .env files using the example the backend folder
 cd ../backend && node setupdb.js
 ```
 
-5. Start the Backend
+5. Start the backend
 
 ```
 cd src && node index.js
