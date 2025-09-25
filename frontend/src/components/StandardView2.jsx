@@ -11,7 +11,6 @@ export default function StandardView2({array}) {
             {/* // sortField-Komponente anzeigen */}
             <SortField />
             <ProductRange array={array}/>
-
         </div>
     )
 }
